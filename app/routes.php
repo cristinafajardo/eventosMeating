@@ -22,9 +22,10 @@ Esto se repite para el formulario de Login, el de Registro, el de eventos, el de
 tambien se puede hacer un grupo de rutas donde solo pueda ver el administrador
 */
 
-//WebController*******************************************
-Route::get('/', 'HomeController@showPrincipal');
-Route::get('/aboutUs', 'HomeController@showAboutUs');
+//WebController****************'HomeController@showPrincipal'***************************
+Route::get('/', function()
+	{return View::make('home');});
+Route::get('aboutUs', 'HomeController@showAboutUs');
 Route::get('/about', 'HomeController@showAbout');
 
 //contacto
